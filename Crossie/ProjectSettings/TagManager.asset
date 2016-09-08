@@ -5,10 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
-  - LeftDirection
-  - RightDirection
-  - UpDirection
-  - DownDirection
   - Enemy
   layers:
   - Default
