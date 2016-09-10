@@ -136,7 +136,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -171,7 +171,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -271,7 +271,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6112544, guid: 21c4b0faa79a05c4682332c0f896cb3d, type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 132996, guid: 21c4b0faa79a05c4682332c0f896cb3d, type: 2}
       propertyPath: m_TagString
@@ -353,7 +353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2591e66b7a5ee4f45819b39873424f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 0
+  enemySpeed: 15
+  directionFacing: 1
 --- !u!1001 &885669475
 Prefab:
   m_ObjectHideFlags: 0
@@ -602,7 +603,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6112544, guid: 21c4b0faa79a05c4682332c0f896cb3d, type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21c4b0faa79a05c4682332c0f896cb3d, type: 2}

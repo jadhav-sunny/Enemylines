@@ -3,20 +3,27 @@ using System.Collections;
 
 public class Enemies : MonoBehaviour
 {
-    public float enemySpeed;
+    [SerializeField]
+    private float enemySpeed;
+
+    [SerializeField]
+    private int directionFacing;
 
     void Update()
     {
-        Movement(enemySpeed);
+        Movement(enemySpeed,directionFacing);
     }
 
-    void Movement(float speed)
+    void Movement(float speed, int dir)
     {
-        transform.Translate(Vector2.right * Time.deltaTime * speed);
+        transform.Translate(Vector2.right * dir * Time.deltaTime * speed);
     }
-
-    int Direction()
+    
+    void OnTriggerEnter2D(Collider2D other)
     {
-        return 0;
+        if (other.tag == "Wall")
+        {
+            directionFacing = -directionFacing;
+        }
     }
 }
