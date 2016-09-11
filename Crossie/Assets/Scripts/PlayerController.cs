@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D other)
     {
-        if (other.tag == "LeftDirection" || other.tag == "RightDirection")
+        if (other.tag == "Enemy")
         {
             transform.position = new Vector2(0,-9.6f);
         }
