@@ -35,5 +35,10 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector2(0,-9.6f);
         }
+        else if (other.tag == "Door")
+        {
+            transform.position = new Vector2(0, -9.6f);
+            GameObject.FindObjectOfType<LevelManager>().LoadNextLevel();
+        }
     }
 }

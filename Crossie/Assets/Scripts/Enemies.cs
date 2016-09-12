@@ -56,7 +56,6 @@ public class Enemies : MonoBehaviour
     {
         if (other.tag == "Wall")
         {
-            Debug.Log("p");
             directionFacing = -directionFacing;
         }
     }
