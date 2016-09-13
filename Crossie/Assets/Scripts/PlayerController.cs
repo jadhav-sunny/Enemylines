@@ -13,6 +13,16 @@ public class PlayerController : MonoBehaviour
         rgbd = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+        if (Aabb.Colliding(ObjectManager.Instance.player,ObjectManager.Instance.redEnemy))
+        {
+            Debug.Log("p");
+        }
+
+    }
+
+
 	// Update is called once per frame
 	/*void FixedUpdate () 
     {
@@ -22,23 +32,8 @@ public class PlayerController : MonoBehaviour
         rgbd.velocity = new Vector2(velX, velY);
 	}*/
 
-    void FixedUpdate()
+    /*void FixedUpdate()
     {
         rgbd.velocity = new Vector3(CrossPlatformInputManager.GetAxis("Horizontal"),CrossPlatformInputManager.GetAxis("Vertical")) * playerSpeed;
-    }
-
-
-
-    void OnTriggerEnter2D (Collider2D other)
-    {
-        if (other.tag == "Enemy")
-        {
-            transform.position = new Vector2(0,-9.6f);
-        }
-        else if (other.tag == "Door")
-        {
-            transform.position = new Vector2(0, -9.6f);
-            GameObject.FindObjectOfType<LevelManager>().LoadNextLevel();
-        }
-    }
+    }*/
 }
