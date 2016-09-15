@@ -15,10 +15,21 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Aabb.Colliding(ObjectManager.Instance.player,ObjectManager.Instance.redEnemy))
+        for (int i = 0; i < ObjectManager.Instance.redEnemy.Length;i++ )
+        {
+            if (Aabb.Colliding(ObjectManager.Instance.player, ObjectManager.Instance.redEnemy[i]))
+            {
+                transform.position = new Vector2(0, -9.56f);
+            }
+        }
+
+        if (Aabb.Colliding(ObjectManager.Instance.player, ObjectManager.Instance.door))
         {
             Debug.Log("p");
+            transform.position = new Vector2(0, -9.56f);
+            LevelManager.myLevelManager.LoadNextLevel();
         }
+            
 
     }
 
@@ -32,8 +43,8 @@ public class PlayerController : MonoBehaviour
         rgbd.velocity = new Vector2(velX, velY);
 	}*/
 
-    /*void FixedUpdate()
+    void FixedUpdate()
     {
         rgbd.velocity = new Vector3(CrossPlatformInputManager.GetAxis("Horizontal"),CrossPlatformInputManager.GetAxis("Vertical")) * playerSpeed;
-    }*/
+    }
 }

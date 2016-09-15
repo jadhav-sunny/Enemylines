@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall
-  - Enemy
-  - Door
+  - RedEnemy
+  - YellowEnemy
   layers:
   - Default
   - TransparentFX

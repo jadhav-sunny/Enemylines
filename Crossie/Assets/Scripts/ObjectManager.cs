@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ObjectManager : MonoBehaviour 
 {
@@ -28,7 +29,17 @@ public class ObjectManager : MonoBehaviour
 
     public GameObject player;
 
-    public GameObject redEnemy;
+    public GameObject[] redEnemy;
+
+    public GameObject[] yellowEnemy;
+
+    public GameObject door;
+
+    void Start()
+    {
+        redEnemy = GameObject.FindGameObjectsWithTag("RedEnemy");
+        yellowEnemy = GameObject.FindGameObjectsWithTag("YellowEnemy");
+    }
 
     //[SerializeField]
     //private GameObject wall;
