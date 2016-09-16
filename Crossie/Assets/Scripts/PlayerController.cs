@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
             {
                 transform.position = new Vector2(0, -9.56f);
             }
+           
         }
 
         if (Aabb.Colliding(ObjectManager.Instance.player, ObjectManager.Instance.door))
@@ -29,6 +30,16 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector2(0, -9.56f);
             LevelManager.myLevelManager.LoadNextLevel();
         }
+
+        for (int j = 0; j < ObjectManager.Instance.walls.Length; j++)
+        {
+            if (Aabb.Colliding(ObjectManager.Instance.player, ObjectManager.Instance.walls[j]))
+            {
+                Debug.Log("p");
+                //transform.position = new Vector2(0, -9.56f);
+            }
+        }
+        
             
 
     }

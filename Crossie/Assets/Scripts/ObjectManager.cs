@@ -35,13 +35,11 @@ public class ObjectManager : MonoBehaviour
 
     public GameObject door;
 
+    public GameObject[] walls;
+
     void Start()
     {
         redEnemy = GameObject.FindGameObjectsWithTag("RedEnemy");
         yellowEnemy = GameObject.FindGameObjectsWithTag("YellowEnemy");
     }
-
-    //[SerializeField]
-    //private GameObject wall;
-    
 }
